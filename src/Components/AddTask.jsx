@@ -18,13 +18,14 @@ const AddTask = ({handleTaskAddition}) => { //Adicionar Tarefa
     };
 
     const handleAddTaskClick = () => {
-        if (inputData !== "" && inputInfo !== "") {
-            
+        const msg = 'Necessário Preencher o campo'
+        inputData === "" ? alert(`${msg} Nova Tarefa.`) :
+        inputInfo === "" ? alert(`${msg} Info.`) : 
         handleTaskAddition(inputData, inputInfo);
         setInputData("");
         setInputInfo("");
         // se a entrada for diferente de "" chama a const com valor e seta a entrada como ''        
-        }
+        
     };
 
     return ( 
